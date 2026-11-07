@@ -1,0 +1,18 @@
+COMO RODAR (XAMPP/WAMP)
+1. Copie a pasta para htdocs (ou www) e abra http://localhost/controle_de_acesso/
+2. No phpMyAdmin, importe bd.sql (cria o banco BD e a tabela usuarios).
+3. Ajuste usuário/senha do MySQL em config.php, se necessário.
+4. A pasta precisa permitir escrita no arquivo arq.in (é onde o contador é gravado).
+
+COMO TESTAR O CONTADOR (deslogado)
+- Abrir index.php: +1.   F5 ou Ctrl+R: +1 a cada recarga.
+Logado
+- Entrar: não muda.   F5 logado: não muda.
+Logout
+- Clicar em Sair: não muda.   Depois, F5 deslogado: volta a contar +1.
+
+COMO CONFERIR A SENHA CRIPTOGRAFADA
+- No phpMyAdmin, tabela usuarios: a coluna senha deve começar com $2y$ e ter 60 caracteres.
+- Contas antigas (senha em texto puro) são convertidas para hash no próximo login.
+
+TROCAR O TEMA DAS NOTÍCIAS: edite noticias.php.
